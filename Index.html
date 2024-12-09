@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ficha 2 JavaScript</title>
+    <title>Ficha 1 JavaScript</title>
 </head>
 <body>
     <script>
@@ -67,6 +67,40 @@
     
     </script>
     <hr>
+    
+    <form id="meuFormulario">
+        <input type="text" id="nome" placeholder="Nome">
+        <p>
+        <input type="email" id="email" placeholder="Email">
+        <p>
+        <input type="number" id="idade" placeholder="Idade">
+        <p>
+        <button type="button" id="exibirDados" onclick="listar()">Exibir Dados</button>
+       </form>
+       <ul id="listaDados"></ul>
 
-</body>
+       <script>
+           function listar(){               
+                const nome = document.getElementById("nome").value;
+                const email = document.getElementById("email").value;
+                const idade = document.getElementById("idade").value;
+
+                const lista = document.getElementById("listaDados");
+
+                const li_nome = document.createElement("li");
+                const li_email = document.createElement("li");
+                const li_idade = document.createElement("li");
+
+
+                li_nome.innerHTML = nome;
+                li_email.innerHTML = email;
+                li_idade.innerHTML = idade;
+
+                lista.appendChild(li_nome);
+                lista.appendChild(li_email);
+                lista.appendChild(li_idade);
+
+            }
+        </script>
+        </body>
 </html>
